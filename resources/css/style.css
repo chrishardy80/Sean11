@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'ADAMCGPRO';
+    src: url('../fonts/ADAMCGPRO.woff2') format('woff2'),
+        url('../fonts/ADAMCGPRO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face{
+    font-family:"Fette Fraktur LT W01 Regular";
+    src:url("../fonts/8e8ae03f-d915-439f-850a-6524a2e85fbb.woff2"),
+      url("966e3cf1-ea6a-4760-9122-99c271c6beab.woff");
+}
+
+#content {
+  display: flex;
+}
+
+
+
+#topbuffer {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+
+#bottombuffer {
+  position: fixed;
+  height: 150px;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+}
+
+#topfade {
+  position: fixed;
+  top: 80px;
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  z-index: 5;
+}
+
+#bottomfade {
+  position: fixed;
+  bottom: 150px;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  z-index:5;
+}
+#background {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+}
+
+#background img {
+  height: 100%;
+}
+
+.title {
+  font-family: "Fette Fraktur LT W01 Regular";
+  font-size: 60px;
+  padding-left: 40px;
+}
+
+#navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 325px;
+  font-family: ADAMCGPRO;
+  z-index: 20;
+  top: 35px;
+
+}
+
+#homenav:hover,
+#aboutnav:hover,
+#contactnav:hover {
+  color: #45a29e;
+
+}
+
+#homenav,
+#aboutnav,
+#contactnav,
+.fa-imdb:hover,
+.fa-twitter-square:hover,
+.fa-envelope-square:hover {
+  transition: all 200ms ease-out 50ms;
+}
+
+.fa-imdb:hover,
+.fa-twitter-square:hover,
+.fa-envelope-square:hover {
+  color: #66fcf1;
+}
+
+
+
+#sideheader {
+  position: fixed;
+  width: 451.5px;
+  bottom: 38vh;
+  font-size: 60px;
+  font-family: ADAMCGPRO;
+  z-index: 20;
+}
+
+#title1 {
+  color: #66fcf1;
+
+}
+
+#title2 {
+  color: #45a29e;
+
+}
+
+#title3 {
+  color: #325957;
+
+}
+#scrollbar {
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  left: 40px;
+  z-index: 15;
+}
+
+#arrowright,
+#arrowleft {
+  position: fixed;
+  font-size: 60px;
+  z-index: 15;
+}
+
+#arrowright:hover,
+#arrowleft:hover
+ {
+  color: #66fcf1;
+}
+
+#topbar {
+  position: fixed;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  z-index: 10;
+}
+
+#socialmedia {
+  position: fixed;
+  right: 40px;
+  font-size: 28px;
+}
+
+#socialmedia .fab,
+#socialmedia .fas {
+  padding-left: 10px;
+}
+
+.active {
+  color: #66fcf1;
+}
+
+.inactive {
+  color: black;
+}
+
+.paragraph {
+  font-family: Sarabun;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #2e2e2d;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+#paragraphone {
+  font-weight: bold;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  right: 80px;
+  top: 120px;
+  width: 30vw;
+  padding-top: 20px;
+
+
+}
+
+
+.imagecontainer {
+  height: 120px;
+  padding: 50px;
+}
+
+img {
+  height: 100%;
+}
+
+#contact {
+  position: fixed;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  z-index: 15;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#scrollinnerone {
+  width: 100%;
+  height: 100vh;
+}
+
+#topbuffer,
+#bottombuffer {
+
+  z-index: 5;
+}
+
+#mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #about {
+    width: 25vw;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+
+  body {
+    width: 100vw;
+  }
+  #content {
+    display: none;
+  }
+
+  #mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  #scroll {
+    display: none;
+  }
+
+  #mobilebanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+
+  #mobiletitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Fette Fraktur LT W01 Regular";
+    font-size: 40px;
+  }
+
+  .fa-bars {
+    font-size: 30px;
+  }
+
+  #mobilelanding {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-image: url("../images/Sean-removebg-4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  #padder {
+    width: 100%;
+    height: 3vh;
+  }
+
+  #mobilesideheader {
+    position: relative;
+    right: 80px;
+    top: 300px;
+    font-size: 25px;
+    font-family: ADAMCGPRO;
+    height: 300px;
+  }
+
+  #mobileabout {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+
+  .paragraph {
+    color: white;
+    opacity: 1 !important;
+  }
+
+  .paragraph p {
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+#mobilecontact {
+  display: flex;
+  justify-content: space-between;
+}
+
+#mobilecontact .imagecontainer {
+  height: 50px;
+  opacity: 1 !important;
+}
+
+}
