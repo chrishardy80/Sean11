@@ -338,6 +338,7 @@ img {
 #mobilecontact .imagecontainer {
   height: 40px;
   opacity: 1 !important;
+  padding: 20px;
 }
 
 }
