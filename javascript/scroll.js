@@ -6,13 +6,9 @@ $(document).ready(function() {
   let top;
   let offset;
   let bodyHeight;
-
-
-
   let scrollHeightPX = $('#about').css('height').slice(0, -2) - ($(window).height()-360);
   let scrollHeightVH = scrollHeightPX/$(window).height()*100;
 
-  console.log("ScrollHeight: " +scrollHeightVH);
   if ($(window).height() > 650) {
     bodyHeight = $(window).height()-$('body').css('padding-top').slice(0, -2)-$('body').css('padding-bottom').slice(0, -2);
     backgroundHeight = "90vh";
@@ -31,7 +27,6 @@ $(document).ready(function() {
   var positionSideHeader = ($(window).width()/2)-($('#sideheader').css("width").slice(0, -2));
   var positionRightArrowHorizontal = ($(window).width()/7);
   var positionRightArrowVertical = ($('#background').css("height").slice(0, -2)*0.08);
-  //var widthAbout = $('#background').css("right").slice(0, -2)-50;
   var widthContact = centreImage;
 
 
@@ -42,19 +37,13 @@ $(document).ready(function() {
   $('#arrowleft').css("left", positionRightArrowHorizontal + "px");
   $('#arrowright, #arrowleft').css("bottom", positionRightArrowVertical + "px");
   var heightAbout = $('#arrowright').css("top").slice(0, -2) - $('#topbar').css("height").slice(0, -2)- 90;
-  //$('#paragraphone').css("width", widthParagraphOne + "px");
-  //$('#paragraphone').css("height", heightParagraphOne + "px");
-  //$('#paragraphone p').css("width", widthParagraphOneP + "px");
-  //$('#paragraphtwo p').css("width", widthParagraphTwoP + "px");
-  //$('#about').css("width", widthAbout + "px");
   $('#about').css("height", heightAbout + "px");
   $('#contact').css("width", widthContact + "px");
-  console.log('title ' + $('.title').css("width").slice(0, -2));
+
   if(($(window).width()/2) > (parseFloat($('#navigation').css("width").slice(0, -2)/2)) + parseFloat($('.title').css("width").slice(0, -2)) +60 ) {
     $('#navigation').css("left", centreNav + "px");
     $('#navigation').css("right", "unset");
     $('#socialmedia').show();
-
   }
   else {
     $('#navigation').css("right", "40px");
@@ -71,7 +60,26 @@ $(document).ready(function() {
 
 
 
+$(window).scroll($.debounce( 250, true, function(){
+  anime({
+
+targets: '#mobilebanner',
+translateY: -80,
+easing: 'easeInOutQuad'
+});
+}));
+$(window).scroll($.debounce( 250, function(){
+  anime({
+
+targets: '#mobilebanner',
+translateY: 0,
+easing: 'easeInOutQuad'
+});
+}));
+
   $(window).on("scroll resize", function(){
+
+
 
     offset = 120/$(window).height()*100;
     top = (inViewport($('#scrollinnerone')))/(inViewport($('#scroll')))*100;
@@ -115,16 +123,6 @@ $(document).ready(function() {
     $('#arrowleft').css("left", positionRightArrowHorizontal + "px");
     $('#arrowright, #arrowleft').css("bottom", positionRightArrowVertical + "px");
     var heightParagraphTwo = $('#arrowright').css("top").slice(0, -2) - $('#topbar').css("height").slice(0, -2)- 60;
-    //$('#paragraphone').css("width", widthParagraphOne + "px");
-    //$('#paragraphone').css("height", heightParagraphOne + "px");
-    //$('#paragraphone p').css("width", widthParagraphOneP + "px");
-    //$('#paragraphtwo p').css("width", widthParagraphTwoP + "px");
-    //$('#paragraphtwo').css("width", widthParagraphTwo + "px");
-    //$('#paragraphtwo').css("height", heightParagraphTwo + "px");
-    //var positionParagraphTwo = ($(window).height()/2 - heightParagraphTwo/2).toFixed(2);
-    //$('#paragraphtwo').css("top", positionParagraphTwo + "px");
-    //$('#paragraphonepointone').css("top", heightParagraphOnePointOne + "px");
-
     $('#contact').css("width", widthContact + "px");
 
     if(($(window).width()/2) > (parseFloat($('#navigation').css("width").slice(0, -2)/2)) + parseFloat($('.title').css("width").slice(0, -2)) +60 ) {

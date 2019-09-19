@@ -270,28 +270,34 @@ img {
   }
 
   #mobilebanner {
+    position: fixed;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
-    padding: 30px;
+    padding: 20px 0;
+    background-color: white;
+    z-index: 10;
   }
 
   #mobiletitle{
-    display: flex;
-    justify-content: center;
+    position: relative;
     text-align: center;
     font-family: "Fette Fraktur LT W01 Regular";
     font-size: 40px;
+    padding-left: 20px;
   }
 
   .fa-bars {
-    font-size: 30px;
+    font-size: 25px;
+    padding-right: 20px;
   }
+
 
   #mobilelanding {
     display: flex;
     justify-content: center;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     background-image: url("../images/Sean-removebg-4.png");
     background-repeat: no-repeat;
@@ -301,7 +307,7 @@ img {
 
   #padder {
     width: 100%;
-    height: 3vh;
+    height: 100px;
   }
 
   #mobilesideheader {
@@ -314,6 +320,8 @@ img {
   }
 
   #mobileabout {
+    display: flex;
+    flex-direction: column;
     background-color: black;
     color: white;
     padding: 20px;
@@ -327,7 +335,7 @@ img {
   .paragraph p {
     padding-bottom: 20px;
     font-size: 20px;
-    text-align: left;
+    font-weight: normal;
   }
 
 #mobilecontact {
