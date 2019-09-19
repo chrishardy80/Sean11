@@ -297,7 +297,7 @@ img {
   #mobilelanding {
     display: flex;
     justify-content: center;
-    height: 85vh;
+    height: 80vh;
     width: 100%;
     background-image: url("../images/Sean-removebg-4.png");
     background-repeat: no-repeat;
@@ -313,7 +313,7 @@ img {
   #mobilesideheader {
     position: relative;
     right: 80px;
-    top: 300px;
+    top: 260px;
     font-size: 25px;
     font-family: ADAMCGPRO;
     height: 300px;
