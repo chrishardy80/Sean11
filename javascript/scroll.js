@@ -60,22 +60,7 @@ $(document).ready(function() {
 
 
 
-$(window).scroll($.debounce( 250, true, function(){
-  anime({
 
-targets: '#mobilebanner',
-translateY: -80,
-easing: 'easeInOutQuad'
-});
-}));
-$(window).scroll($.debounce( 250, function(){
-  anime({
-
-targets: '#mobilebanner',
-translateY: 0,
-easing: 'easeInOutQuad'
-});
-}));
 
   $(window).on("scroll resize", function(){
 
@@ -503,4 +488,33 @@ easing: 'easeInOutQuad'
   }
   page = "contact";
   });
+
+  $('#mobilebars').on('click',
+  function() {
+    $('.mobilenav').animate({'right': '0'});
+});
+
+$('#mobile').click(function(e) {
+  if( $(e.target).closest("#mobilebars").length > 0 ) {
+    return false;
+}
+    $('.mobilenav').animate({'right': '-190'});
+});
+
+$(window).scroll($.debounce( 250, true, function(){
+  anime({
+
+targets: '#mobilebanner',
+translateY: -80,
+easing: 'easeInOutQuad'
+});
+}));
+$(window).scroll($.debounce( 250, function(){
+  anime({
+
+targets: '#mobilebanner',
+translateY: 0,
+easing: 'easeInOutQuad'
+});
+}));
 });
