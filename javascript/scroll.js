@@ -8,6 +8,7 @@ $(document).ready(function() {
   let bodyHeight;
   let scrollHeightPX = $('#about').css('height').slice(0, -2) - ($(window).height()-360);
   let scrollHeightVH = scrollHeightPX/$(window).height()*100;
+  var headerscroll;
 
   if ($(window).height() > 650) {
     bodyHeight = $(window).height()-$('body').css('padding-top').slice(0, -2)-$('body').css('padding-bottom').slice(0, -2);
@@ -65,11 +66,12 @@ $(document).ready(function() {
   $(window).on("scroll resize", function(){
 
 
-
+    headerscroll = (inViewport($('#mobilelanding'))/$(window).height());
     offset = 120/$(window).height()*100;
     top = (inViewport($('#scrollinnerone')))/(inViewport($('#scroll')))*100;
     $('#about').css('top', (offset+top-100) + "vh");
-
+    console.log(headerscroll);
+    console.log($(window).height());
     var bodyHeight;
     let scrollHeightPX = $('#about').css('height').slice(0, -2) - ($(window).height()-360);
     let scrollHeightVH = scrollHeightPX/$(window).height()*100;
@@ -501,6 +503,7 @@ $('#mobile').click(function(e) {
     $('.mobilenav').animate({'right': '-190'});
 });
 
+
 $(window).scroll($.debounce( 250, true, function(){
   anime({
 
@@ -517,4 +520,6 @@ translateY: 0,
 easing: 'easeInOutQuad'
 });
 }));
+
+
 });

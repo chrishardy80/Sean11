@@ -102,20 +102,7 @@
 
 }
 
-#homenav,
-#aboutnav,
-#contactnav,
-.fa-imdb:hover,
-.fa-twitter-square:hover,
-.fa-envelope-square:hover {
-  transition: all 200ms ease-out 50ms;
-}
 
-.fa-imdb:hover,
-.fa-twitter-square:hover,
-.fa-envelope-square:hover {
-  color: #66fcf1;
-}
 
 
 
@@ -177,11 +164,32 @@
   position: fixed;
   right: 40px;
   font-size: 28px;
+
+}
+
+#socialmedia a {
+  color: black;
 }
 
 #socialmedia .fab,
 #socialmedia .fas {
+  text-decoration: none;
   padding-left: 10px;
+}
+
+#homenav,
+#aboutnav,
+#contactnav,
+.fa-imdb:hover,
+.fa-twitter-square:hover,
+.fa-envelope-square:hover {
+  transition: all 200ms ease-out 50ms;
+}
+
+.fa-imdb:hover,
+.fa-twitter-square:hover,
+.fa-envelope-square:hover {
+  color: #66fcf1;
 }
 
 .active {
@@ -265,6 +273,11 @@ img {
     font-size: 20px;
   }
 }
+@media only screen and (max-width: 1050px) {
+  #about {
+    width: 20vw;
+  }
+}
 
 @media only screen and (max-width: 990px) {
   #sideheader {
@@ -273,12 +286,8 @@ img {
   }
 }
 
-@media only screen and (max-width: 840px) {
-  #navigation {
-    width: 250px;
-  }
-}
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 850px) {
  @media (orientation: portrait) {
    #mobilelanding {
      height: 80vh;
