@@ -27,7 +27,6 @@
   font-size: 24px;
   right: -190px;
   color: black;
-
   height: 100%;
   z-index: 20;
   background-color: rgba(255,255,255,0.6);
@@ -67,9 +66,11 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
   z-index:5;
 }
+
 #background {
   position: fixed;
   left: 50%;
+  bottom: 0;
   transform: translate(-50%, 0);
   z-index: 10;
 }
@@ -92,43 +93,35 @@
   font-family: ADAMCGPRO;
   z-index: 20;
   top: 35px;
-
 }
 
 #homenav:hover,
 #aboutnav:hover,
 #contactnav:hover {
   color: #45a29e;
-
 }
-
-
-
-
 
 #sideheader {
   position: fixed;
-  width: 451.5px;
-  bottom: 38vh;
-  font-size: 60px;
+  width: 365px;
+  bottom: 33vh;
+  font-size: 50px;
   font-family: ADAMCGPRO;
   z-index: 20;
 }
 
-#title1 {
+#title4 {
   color: #66fcf1;
-
-}
-
-#title2 {
-  color: #45a29e;
-
 }
 
 #title3 {
-  color: #325957;
-
+  color: #45a29e;
 }
+
+#title2 {
+  color: #325957;
+}
+
 #scrollbar {
   position: fixed;
   display: flex;
@@ -222,10 +215,7 @@
   top: 120px;
   width: 30vw;
   padding-top: 20px;
-
-
 }
-
 
 .imagecontainer {
   height: 120px;
@@ -278,14 +268,6 @@ img {
     width: 20vw;
   }
 }
-
-@media only screen and (max-width: 990px) {
-  #sideheader {
-    font-size: 40px;
-    transform: translate(25%, 0);
-  }
-}
-
 
 @media only screen and (max-width: 850px) {
  @media (orientation: portrait) {
@@ -370,11 +352,12 @@ img {
 
   #mobilesideheader {
     position: relative;
-    right: 80px;
-
-    font-size: 25px;
+    right: 90px;
+    top: 270px;
+    font-size: 22px;
     font-family: ADAMCGPRO;
-    height: 300px;
+    height: 85px;
+    
   }
 
   #mobileabout {

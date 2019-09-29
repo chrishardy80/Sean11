@@ -25,7 +25,7 @@ $(document).ready(function() {
   }
   var centreImage = ($(window).width()/2)-($('#background').css("width").slice(0, -2)/2);
   var centreNav = ($(window).width()/2)-($('#navigation').css("width").slice(0, -2)/2);
-  var positionSideHeader = ($(window).width()/2)-($('#sideheader').css("width").slice(0, -2));
+  var positionSideHeader = (($(window).width()/2)-($('#sideheader').css("width").slice(0, -2)))*0.8;
   var positionRightArrowHorizontal = ($(window).width()/7);
   var positionRightArrowVertical = ($('#background').css("height").slice(0, -2)*0.08);
   var widthContact = centreImage;
@@ -90,7 +90,7 @@ $(document).ready(function() {
     }
     var centreImage = ($(window).width()/2)-($('#background').css("width").slice(0, -2)/2);
     var centreNav = ($(window).width()/2)-($('#navigation').css("width").slice(0, -2)/2);
-    var positionSideHeader = ($(window).width()/2)-($('#sideheader').css("width").slice(0, -2));
+    var positionSideHeader = (($(window).width()/2)-($('#sideheader').css("width").slice(0, -2)))*0.8;
     var positionRightArrowHorizontal = ($(window).width()/7);
     var positionRightArrowVertical = ($('#background').css("height").slice(0, -2)*0.08);
     var widthParagraphOne = (centreImage*1.2) - $('body').css("padding-left").slice(0, -2);
