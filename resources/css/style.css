@@ -80,8 +80,7 @@
 }
 
 .title {
-  font-family: "Fette Fraktur LT W01 Regular";
-  font-size: 60px;
+  font-family: ADAMCGPRO;
   padding-left: 40px;
 }
 
@@ -110,16 +109,29 @@
   z-index: 20;
 }
 
-#title4 {
+#title4,
+#mobiletitle4 {
   color: #66fcf1;
 }
 
-#title3 {
+#title3,
+#mobiletitle3 {
   color: #45a29e;
 }
 
-#title2 {
+#title2,
+#mobiletitle2 {
   color: #325957;
+}
+
+#title1{
+  font-size: 40px;
+}
+
+#title2,
+#title3,
+#title4{
+  font-size: 30px;
 }
 
 #scrollbar {
@@ -149,7 +161,7 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  align-items: center;
+  align-items: flex-start;
   z-index: 10;
 }
 
@@ -315,18 +327,27 @@ img {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: center;
-    padding: 20px 0;
+    align-items: flex-start;
+    padding: 20px 0;;
     background-color: white;
     z-index: 10;
   }
 
   #mobiletitle{
     position: relative;
-    text-align: center;
-    font-family: "Fette Fraktur LT W01 Regular";
-    font-size: 40px;
+    text-align: left;
+    font-family: ADAMCGPRO;
     padding-left: 20px;
+  }
+
+  #mobiletitle1{
+    font-size: 22px;
+  }
+
+  #mobiletitle2,
+  #mobiletitle3,
+  #mobiletitle4{
+    font-size: 18px;
   }
 
   .fa-bars {
@@ -347,7 +368,7 @@ img {
 
   #padder {
     width: 100%;
-    height: 80px;
+    height: 120px;
   }
 
   #mobilesideheader {

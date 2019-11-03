@@ -25,7 +25,6 @@ $(document).ready(function() {
   }
   var centreImage = ($(window).width()/2)-($('#background').css("width").slice(0, -2)/2);
   var centreNav = ($(window).width()/2)-($('#navigation').css("width").slice(0, -2)/2);
-  var positionSideHeader = (($(window).width()/2)-($('#sideheader').css("width").slice(0, -2)))*0.8;
   var positionRightArrowHorizontal = ($(window).width()/7);
   var positionRightArrowVertical = ($('#background').css("height").slice(0, -2)*0.08);
   var widthContact = centreImage;
@@ -33,7 +32,6 @@ $(document).ready(function() {
 
   $('body').css("height", bodyHeight + "px");
   $('#background').css("height", backgroundHeight);
-  $('#sideheader').css("left", positionSideHeader  + "px");
   $('#arrowright').css("right", positionRightArrowHorizontal + "px");
   $('#arrowleft').css("left", positionRightArrowHorizontal + "px");
   $('#arrowright, #arrowleft').css("bottom", positionRightArrowVertical + "px");
@@ -90,22 +88,18 @@ $(document).ready(function() {
     }
     var centreImage = ($(window).width()/2)-($('#background').css("width").slice(0, -2)/2);
     var centreNav = ($(window).width()/2)-($('#navigation').css("width").slice(0, -2)/2);
-    var positionSideHeader = (($(window).width()/2)-($('#sideheader').css("width").slice(0, -2)))*0.8;
     var positionRightArrowHorizontal = ($(window).width()/7);
     var positionRightArrowVertical = ($('#background').css("height").slice(0, -2)*0.08);
     var widthParagraphOne = (centreImage*1.2) - $('body').css("padding-left").slice(0, -2);
-    var heightParagraphOne = $('#sideheader').css("top").slice(0, -2)-$('#topbar').css("height").slice(0, -2)-$('body').css("padding-top").slice(0, -2);
     var widthParagraphOneP = centreImage - $('body').css("padding-left").slice(0, -2);
     var widthParagraphTwoP = (centreImage);
     var widthParagraphTwo = (centreImage)*1.2;
-    var heightParagraphOnePointOne = parseFloat($('#sideheader').css("top").slice(0, -2)) + parseFloat($('#sideheader').css("height").slice(0, -2)/2);
     var widthContact = centreImage;
 
 
     $('body').css("height", bodyHeight + "px");
     $('#background').css("height", backgroundHeight);
     //$('#background').css("left", centreImage + "px");
-    $('#sideheader').css("left", positionSideHeader  + "px");
     $('#arrowright').css("right", positionRightArrowHorizontal + "px");
     $('#arrowleft').css("left", positionRightArrowHorizontal + "px");
     $('#arrowright, #arrowleft').css("bottom", positionRightArrowVertical + "px");
@@ -508,7 +502,7 @@ $(window).scroll($.debounce( 250, true, function(){
   anime({
 
 targets: '#mobilebanner',
-translateY: -80,
+translateY: -116,
 easing: 'easeInOutQuad'
 });
 }));
