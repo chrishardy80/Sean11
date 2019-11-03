@@ -366,6 +366,11 @@ img {
     background-position: center;
   }
 
+  #aboutmarker{
+    position: relative;
+    top: -116px;
+  }
+
   #padder {
     width: 100%;
     height: 120px;
